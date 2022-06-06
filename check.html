@@ -31,7 +31,10 @@
     <!-- section_開卡進度區-->
     <section class="sect_card">
       <div class="sect_container">
-      
+        <!-- 新提示 -->
+        <button type="button"  data-bs-toggle="modal" data-bs-target="#refresh_info">
+          刷新第一次的提示內容
+        </button>
         <!-- 解鎖黃金卡進度 -->
         <h2>解鎖黃金卡進度</h2>
         <div class="card_box card_refresh_box">
@@ -148,6 +151,21 @@
               <img src="assets/img/index/card_btn_close.svg" alt="關閉放大圖圖示">
             </button>
             <img src="assets/img/index_step_img/gold_step03.jpg" alt="放大圖片">
+          </div>
+        </div>
+      </div>
+
+      <!-- refresh_info -->
+      <div class="modal fade" id="refresh_info" tabindex="-1" aria-labelledby="refresh_infoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal_content_case">
+           
+            <p>
+              各項任務同步<b>需等待3-5分鐘</b>，謝謝您的耐心等待！
+            </p>
+            <button type="button" class="modal_btn_close" data-bs-dismiss="modal" aria-label="Close">
+              我知道了
+               </button>
           </div>
         </div>
       </div>

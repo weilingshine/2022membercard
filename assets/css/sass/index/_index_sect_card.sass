@@ -62,7 +62,7 @@
             b
                 color: $color_main_blue
             @include mdScreen
-                margin-bottom: 20px
+                margin: 0 30px 20px
         // 互動按鈕
         &_btn
             display: inline-block
@@ -94,9 +94,7 @@
                 &_title
                     margin-bottom: 7px
 
-                // card 說明文
-                &_text
-                    margin-bottom: 7px
+                
 
 // ++繼承 基礎 card + 細節微調  ==>  解鎖黃金卡進度
 .card
@@ -115,12 +113,19 @@
                 width: 50px
         &:not(:last-child)
             margin-bottom: 20px
+        .card
+            &_box
+                // card 說明文
+                &_text
+                    margin-bottom: 7px
+                    @include mdScreen
+                        margin: 0 10px 21px
     // 調整沒有按鈕的畫面
     &_wait_box
         .card
             &_box
                 &_text
-                        margin-bottom: 0
+                    margin-bottom: 0
 
 
             

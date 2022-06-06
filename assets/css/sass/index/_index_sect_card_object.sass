@@ -93,6 +93,7 @@
 
 // 任務進度 圖片modal群組
 .img_box
+    position: relative
     margin: 15px 0 25px
     background: $bg_img_box
     border-radius: 10px
@@ -101,15 +102,18 @@
     img
         width: 100%
     &_btn
+        position: absolute
         display: flex
         justify-content: center
         align-items: center
-        margin: 7px auto
+        margin: 7px 7px
         +main_gradient
         border: 0
         border-radius: 50%
         width: 36px
         height: 36px
+        top: 0
+        right: 0
         +card_animation
         &:hover
             transform: scale(1.05)
@@ -165,8 +169,9 @@
         img
             width: 50%
     + .card_box_text
-        margin-bottom: 21px
-        padding: 0 10px
+        // margin: 0 10px 21px
+        // margin-bottom: 21px
+        // padding: 0 10px
         text-align: left
 
 
@@ -175,7 +180,6 @@
     .img_box
         margin: 0 0 25px
            
-
        
 // modal 背景色
 .modal-backdrop
@@ -186,6 +190,51 @@
     @include smScreen
         width: unset
         max-width: unset
+// modal text 版本
+.modal
+    &_content_case
+        position: relative
+        margin: 0 auto
+        padding: 45px 30px 
+        width: 100%
+        max-width: 480px
+        font-size: 18px
+        pointer-events: auto
+        background-color: #fff
+        background-clip: padding-box
+        border: 2px solid #fff
+        border-radius: 17px
+        outline: 0
+        +btn_gradient_shadow
+        color: $color_default_text
+
+        b
+            color: $color_main_blue
+        
+    &_btn_close
+        // transform: translateX(-50%)
+        display: flex
+        justify-content: center
+        align-items: center        
+        box-sizing: content-box
+        color: $color_white
+        margin: 1.4rem auto 0
+        border-radius: 8px
+        padding: 12px 20px
+        border: 0
+        font-size: 18px
+        +main_gradient
+        +card_animation
+        &:hover
+            +main_gradient_hover
+            +btn_gradient_shadow
+
+        
+
+    
+    
+
+
 
         
     
